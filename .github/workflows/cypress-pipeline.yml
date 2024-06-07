@@ -4,7 +4,7 @@ name: Run Basic Testes
 # em que momento será executada
 on: 
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:    
   # o q vai ser feito nessa pipeline
@@ -17,7 +17,7 @@ jobs:
     # github actions tem actions pre prontas; no cypress tem action q faz tudo p a gente, no uses 
     steps:
       # clone do projeto
-      - name: Chckout/Clone do projeto
+      - name: Checkout/Clone do projeto
         uses: actions/checkout@v4
 
       #execução e config do projeto
