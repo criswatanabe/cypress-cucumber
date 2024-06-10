@@ -3,7 +3,7 @@
 Feature: Login
     Eu como cliente
     Quero fazer login na aplicação
-    Para fazer um pedido de compra
+    Para fazer um pedido de compra e testar
 
     Scenario: Login com campo e-mail vazio
         Given I am on login screen
