@@ -2,7 +2,7 @@
 const elements = {
     fields:{
         name:"#user",
-        email:"#email123",
+        email:"#email",
         password:"#password"
     },
     buttons:{
