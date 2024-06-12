@@ -3,7 +3,7 @@ const elements = {
     fields:{
         name:"#user",
         email:"#email",
-        password:"#password"
+        password:"#password123"
     },
     buttons:{
         register:"#btnRegister"
