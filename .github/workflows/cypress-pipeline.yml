@@ -16,7 +16,7 @@ jobs:
     # passo a passo p rodar os testes
     # github actions tem actions pre prontas; no cypress tem action q faz tudo p a gente, no uses 
     steps:
-      # clone do projeto
+
       - name: Checkout/Clone do projeto
         uses: actions/checkout@v4
 
