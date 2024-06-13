@@ -36,9 +36,9 @@ jobs:
        # upload do relatorio do mocha
        - name: upload do relatorio do mocha
          uses: actions/upload-artifact@v4 
-           with:
-             name: Relatório
-             path: cypress\reports\html
+         with:
+          name: Relatório
+          path: cypress\reports\html
 
 
        
