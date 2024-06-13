@@ -33,12 +33,12 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
-       # upload do relatorio do mocha
+       # upload do relatorio do mocha - teste
        - name: upload do relatorio do mocha
          uses: actions/upload-artifact@v4 
          with:
-          name: Relatório
-          path: cypress\reports\html
+            name: Relatório
+            path: cypress\reports\html
 
 
        
