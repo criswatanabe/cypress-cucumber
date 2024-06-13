@@ -3,10 +3,10 @@ const elements = {
     fields:{
         name:"#user",
         email:"#email",
-        password:"#password123"
+        password:"#password"
     },
     buttons:{
-        register:"#btnRegister123"
+        register:"#btnRegister"
     },
     messages:{
         errorMessage:"#errorMessageFirstName",
