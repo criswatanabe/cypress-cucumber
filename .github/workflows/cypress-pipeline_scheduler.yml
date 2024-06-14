@@ -1,0 +1,47 @@
+# nome da pipeline
+name: Run Basic Testes
+
+# em que momento será executada
+on: 
+  schedule:
+    - cron: '30 19 * * *'
+
+jobs:    
+  # o q vai ser feito nessa pipeline
+  # só teremos um job: rodar os testes
+  cypress-run:
+    # maquina q será executado - windows, mac ou linux, ubunto
+    runs-on: ubuntu-latest
+
+    # passo a passo p rodar os testes
+    # github actions tem actions pre prontas; no cypress tem action q faz tudo p a gente, no uses 
+    steps:
+      # clone do projeto
+      - name: Checkout/Clone do projeto
+        uses: actions/checkout@v4
+
+      # exemplo de execução no terminal - no caso é o arquivo package-lock.json; pode coloca-lo no .git.ignore
+      - name: instalar dependencias do projeto
+        run: npm install        
+
+      # execução e config do projeto
+      - name: Run tests
+        uses: cypress-io/github-action@v6
+        with: 
+          record: true,
+        #colocar a chave secrets que criou no github linkando com o cypress cloud  
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+      # upload de relatorio do mocha 
+      - name: upload relatorio
+        uses: actions/upload-artifact@v4
+        with:
+          name: Relatório
+          path: cypress/reports/html
+
+
+          
+
+
+       
