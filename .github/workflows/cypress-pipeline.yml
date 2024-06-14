@@ -24,7 +24,7 @@ jobs:
       - name: instalar dependencias do projeto
         run: npm install        
 
-      #execução e config do projeto
+      # execução e config do projeto
       - name: Run tests
         uses: cypress-io/github-action@v6
         with: 
@@ -32,5 +32,13 @@ jobs:
         #colocar a chave secrets que criou no github linkando com o cypress cloud  
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+      # upload de relatorio do mocha 
+      - name: upload relatorio
+        uses: actions/upload-artifact@v4
+        with:
+          name: Relatório
+          path: C:\Users\cwata\OneDrive\Documentos\cypress-bdd\cypress\reports\html\index.html
+
 
        
